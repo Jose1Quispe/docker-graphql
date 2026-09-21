@@ -22,13 +22,13 @@ jobs:
       with:
         major_pattern: "major:"
         minor_pattern: "feat:"
-        format: "${major}.${minor}.${patch}-prerelease${increment}
+        format: "${major}.${minor}.${patch}-prerelease${increment}"
     
     - name: Docker login
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
-        NEW_VERSION: ${{steps.version.outputs.version}}
+        NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         echo " Iniciando login "
         echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USER" --password-stdin
