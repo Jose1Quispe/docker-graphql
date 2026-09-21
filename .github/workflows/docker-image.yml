@@ -31,7 +31,7 @@ jobs:
         docker build -t joselqv202/docker-graphql:0.0.2 .
     - name: push Docker Image #"subir la imagen"
       run: 
-        docker push -t joselqv202/docker-graphql:0.0.2 .
+        docker push -t joselqv202/docker-graphql:0.0.2
         
     
         
