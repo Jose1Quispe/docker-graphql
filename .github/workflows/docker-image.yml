@@ -28,9 +28,9 @@ jobs:
 
     - name: Build Docker Image #"construir imagen"
       run: 
-        docker build -t joselqv202/docker-graphql:0.0.2 .
+        docker build --tag joselqv202/docker-graphql:0.0.2 .
     - name: push Docker Image #"subir la imagen"
       run: 
-        docker push -t $DOCKER_USER/docker-graphql:0.0.2
+        docker push --tag $DOCKER_USER/docker-graphql:0.0.2
    
       #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
